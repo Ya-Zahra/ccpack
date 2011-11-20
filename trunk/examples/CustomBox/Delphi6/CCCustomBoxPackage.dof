@@ -1,0 +1,120 @@
+[FileVersion]
+Version=6.0
+[Compiler]
+A=8
+B=0
+C=1
+D=1
+E=0
+F=0
+G=1
+H=1
+I=1
+J=0
+K=0
+L=1
+M=0
+N=1
+O=1
+P=1
+Q=0
+R=0
+S=0
+T=0
+U=0
+V=1
+W=0
+X=1
+Y=1
+Z=1
+ShowHints=1
+ShowWarnings=1
+UnitAliases=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+[Linker]
+MapFile=3
+OutputObjs=0
+ConsoleApp=1
+DebugInfo=0
+RemoteSymbols=0
+MinStackSize=16384
+MaxStackSize=1048576
+ImageBase=4194304
+ExeDescription=Custom Box example
+[Directories]
+OutputDir=..
+UnitOutputDir=..\dcu
+PackageDLLOutputDir=
+PackageDCPOutputDir=
+SearchPath=
+Packages=Vcl50;Vclx50;VclSmp50;Vcldb50;RxCtl5;RxDB5;RxBDE5;dclocx50;rbRCL55;rbBDE55;rbTDBC55;rbUSER55;headwork;vcl;rtl;vclx;vcldb;dbrtl;bdertl;vcldbx;vclactnband
+Conditionals=
+DebugSourceDirs=
+UsePackages=0
+[Parameters]
+RunParams=
+HostApplication=C:\Program Files\Borland\Delphi7\Bin\delphi32.exe
+Launcher=
+UseLauncher=0
+DebugCWD=
+RemoteHost=cerity
+RemotePath=q:\software\makroedittest.exe
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=4
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.4.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+Compilation Time=19/05/2002 00:22:43
+[Excluded Packages]
+C:\Program Files\Borland\Delphi7\Bin\dcldbx70.bpl=Borland dbExpress Components
+c:\program files\borland\delphi7\Bin\dclib70.bpl=InterBase Data Access Components
+c:\program files\borland\delphi7\Bin\dcldbxcds70.bpl=Borland SimpleDataset Component (DBX)
+C:\Program Files\Borland\Delphi7\Bin\dclmid70.bpl=Borland MyBase DataAccess Components
+c:\program files\borland\delphi7\Bin\dclie70.bpl=Internet Explorer Components
+c:\program files\borland\delphi7\Bin\dclIntraweb_50_70.bpl=Intraweb 5.0 Design Package for Delphi 7
+c:\program files\borland\delphi7\Bin\dclite70.bpl=Borland Integrated Translation Environment
+c:\program files\borland\delphi7\Bin\dcltee70.bpl=TeeChart Components
+c:\program files\borland\delphi7\Bin\dclnet70.bpl=Borland Internet Components
+c:\program files\borland\delphi7\Bin\dclsoap70.bpl=Borland SOAP Components
+c:\program files\borland\delphi7\Bin\dclocx70.bpl=Borland Sample Imported ActiveX Controls
+C:\WINNT\System32\ibevnt70.bpl=Borland Interbase Event Alerter Component
+c:\program files\borland\delphi7\Bin\dclaxserver70.bpl=Microsoft Office 97 Sample Automation Server Wrapper Components
+c:\program files\borland\delphi7\Bin\DBWEBXPRT.BPL=Borland Web Wizard Package
+C:\Program Files\Borland\Delphi7\Bin\dclclxstd70.bpl=Borland CLX Standard Components
+c:\program files\borland\delphi7\Bin\dclclxdb70.bpl=Borland CLX Database Components
+D:\out\bpl\HkIdeExpert7.bpl=iCD. IDE Expert
+D:\out\bpl\dcldummzeuchchart70.bpl=dummzeuch.de Charts - designtime package
+D:\out\bpl\dzAutoSave70.bpl=dummzeuch.de Auto Save Wizard
+q:\bpl\UnicodeConvDelphi7.bpl=Unicode Converter Library (UCL)
+Q:\bpl\Xdom_3_1Delphi7.bpl=Extended Document Object Model (XDOM 3.1)
+Q:\bpl\CompBAR7.bpl=Component Bar Expert 1.0.4
+Q:\bpl\dclusr70.bpl=Borland User Components
+[HistoryLists\hlUnitAliases]
+Count=1
+Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+[HistoryLists\hlUnitOutputDirectory]
+Count=1
+Item0=..\dcu

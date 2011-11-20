@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <PersonalityInfo>
+    <Option>
+      <Option Name="Personality">Default.Personality</Option>
+      <Option Name="ProjectType"></Option>
+      <Option Name="Version">1.0</Option>
+      <Option Name="GUID">{3F0A509E-977F-4CE4-BAD8-6AC2A4AC2CE0}</Option>
+    </Option>
+  </PersonalityInfo>
+  <Default.Personality>
+    
+    <Projects>
+      <Projects Name="ccpack.bpl">ccpack.bdsproj</Projects>
+      <Projects Name="ccpackdsg.bpl">ccpackdsg.bdsproj</Projects>
+      <Projects Name="Targets">ccpack.bpl ccpackdsg.bpl</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>

@@ -1,0 +1,30 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = ccpack.bpl ccpackdsg.bpl ccpack60.bpl ccpackdsg60.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+
+ccpack.bpl: ..\Delphi7\ccpack.dpk
+  $(DCC)
+
+ccpackdsg.bpl: ..\Delphi7\ccpackdsg.dpk
+  $(DCC)
+
+ccpack60.bpl: ccpack.dpk
+  $(DCC)
+
+ccpackdsg60.bpl: ccpackdsg.dpk
+  $(DCC)
+
+

@@ -1,6 +1,7 @@
 package ccpack;
 
 {$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
 {$BOOLEVAL OFF}
@@ -22,8 +23,9 @@ package ccpack;
 {$WRITEABLECONST OFF}
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
+{$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'Custom Containers Pack - runtime'}
-{$LIBSUFFIX '100'}
+{$LIBSUFFIX '160'}
 {$RUNONLY}
 {$IMPLICITBUILD OFF}
 

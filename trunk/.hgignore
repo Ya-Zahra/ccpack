@@ -1,0 +1,7 @@
+\.svn/
+dcu/
+.*\.local$
+.*\.identcache$
+.*\.~.*
+.*\.tvsconfig$
+.*\.dsk$

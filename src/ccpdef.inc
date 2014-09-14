@@ -18,55 +18,16 @@
 {                                                       }
 {*******************************************************}
 
+{$i Delphiversions.inc}
+
 //======================================
 // VCL Version Define
 
-{$IFDEF VER185}  // Delphi 2007 (not really necessary since Delphi 2006 also defines VER180)
+{$IFDEF DELPHI5_UP}
       {$DEFINE VER_VCL5}
-{$ENDIF}
-
-{$IFDEF VER180}  // Delphi 2006
-      {$DEFINE VER_VCL5}
-{$ENDIF}
-
-{$IFDEF VER170}  // Delphi 2005
-      {$DEFINE VER_VCL5}
-{$ENDIF}
-
-{$IFDEF VER150}  // Delphi 7
-      {$DEFINE VER_VCL5}
-{$ENDIF}
-
-{$IFDEF VER130}  // Delphi 5
-      {$DEFINE VER_VCL5}
-{$ENDIF}
-
-{$IFDEF VER125}  // CBuilder 4
-      {$DEFINE VER_VCL4}
-{$ENDIF}
-
-{$IFDEF VER120}  // Delphi 4
-      {$DEFINE VER_VCL4}
-{$ENDIF}
-
-
-//======================================
-// Language&IDE Define
-
-{$IFDEF VER180}  // Delphi 2006
       {$DEFINE VER_D}
+{$ELSE}
+'Versions older than Delphi5 are no longer supported.'
+'You might be able to find a ccpack version for Delphi 4 on code central.'
 {$ENDIF}
-
-{$IFDEF VER150}  // Delphi 7
-      {$DEFINE VER_D}
-{$ENDIF}
-
-{$IFDEF VER130}  // Delphi 5
-      {$DEFINE VER_D}
-{$ENDIF}
-
-{$IFDEF VER125}  // CBuilder 4
-      {$DEFINE VER_CB}
-{$ENDIF}
-
 

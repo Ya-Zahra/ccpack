@@ -1,6 +1,5 @@
 [FileVersion]
 Version=6.0
-
 [Compiler]
 A=8
 B=0
@@ -31,7 +30,6 @@ Z=1
 ShowHints=1
 ShowWarnings=1
 UnitAliases=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
-
 [Linker]
 MapFile=0
 OutputObjs=0
@@ -42,7 +40,6 @@ MinStackSize=16384
 MaxStackSize=1048576
 ImageBase=4194304
 ExeDescription=Custom Container Pack - designtime
-
 [Directories]
 OutputDir=
 UnitOutputDir=.\dcu
@@ -53,7 +50,6 @@ Packages=vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;
 Conditionals=
 DebugSourceDirs=
 UsePackages=0
-
 [Parameters]
 RunParams=
 HostApplication=C:\Program Files\Borland\Delphi6\Bin\delphi32.exe
@@ -74,7 +70,6 @@ Private=0
 DLL=0
 Locale=1046
 CodePage=1252
-
 [Version Info Keys]
 CompanyName=
 FileDescription=

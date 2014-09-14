@@ -123,7 +123,7 @@ end;
 
 function GetCustomContainerUnit(const AClassName: string): string;
 begin
-  Result := GetTypeData(PTypeInfo(GetCustomContainerClass(AClassName).ClassInfo))^.UnitName;
+  Result := string(GetTypeData(PTypeInfo(GetCustomContainerClass(AClassName).ClassInfo))^.UnitName);
 end;
 
 function GetCustomContainerClass(const Index: Integer): TComponentClass;

@@ -1,5 +1,6 @@
 [FileVersion]
 Version=6.0
+
 [Compiler]
 A=8
 B=0
@@ -30,6 +31,7 @@ Z=1
 ShowHints=1
 ShowWarnings=1
 UnitAliases=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+
 [Linker]
 MapFile=0
 OutputObjs=0
@@ -40,9 +42,10 @@ MinStackSize=16384
 MaxStackSize=1048576
 ImageBase=4194304
 ExeDescription=Custom Container Pack - runtime
+
 [Directories]
 OutputDir=
-UnitOutputDir=..\dcu
+UnitOutputDir=.\dcu
 PackageDLLOutputDir=
 PackageDCPOutputDir=
 SearchPath=
@@ -50,16 +53,14 @@ Packages=vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;
 Conditionals=
 DebugSourceDirs=
 UsePackages=0
+
 [Parameters]
 RunParams=
 HostApplication=
 Launcher=
 UseLauncher=0
 DebugCWD=
-[Language]
-ActiveLang=
-ProjectLang=
-RootDir=D:\source\icd.ccpack\Delphi7\
+
 [Version Info]
 IncludeVerInfo=1
 AutoIncBuild=0
@@ -85,17 +86,3 @@ OriginalFilename=
 ProductName=
 ProductVersion=1.0.0.0
 Comments=
-[HistoryLists\hlUnitAliases]
-Count=1
-Item0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
-[HistoryLists\hlUnitOutputDirectory]
-Count=3
-Item0=..\dcu
-Item1=Q:\bpl\dcu\ccpack\dcl
-Item2=Q:\bpl\dcu\ccpack\rtl
-[HistoryLists\hlBPLOutput]
-Count=1
-Item0=Q:\bpl
-[HistoryLists\hlDCPOutput]
-Count=1
-Item0=Q:\bpl\dcp

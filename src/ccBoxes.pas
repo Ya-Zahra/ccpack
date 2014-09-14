@@ -51,12 +51,12 @@ type
     procedure CreateParams(var Params: TCreateParams); override;
     procedure SetParent(AParent: TWinControl); override;
     procedure Paint; override;
-    procedure GetChildren(Proc: TGetChildProc; Root: TComponent); override;
     procedure SetChildOrder(Child: TComponent; Order: Integer); override;
     property Caption;
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
+    procedure GetChildren(Proc: TGetChildProc; Root: TComponent); override;
     property DockManager;
   published
     property Align;
@@ -124,11 +124,11 @@ type
   protected
     procedure CreateParams(var Params: TCreateParams); override;
     procedure SetParent(AParent: TWinControl); override;
-    procedure GetChildren(Proc: TGetChildProc; Root: TComponent); override;
     procedure SetChildOrder(Child: TComponent; Order: Integer); override;
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
+    procedure GetChildren(Proc: TGetChildProc; Root: TComponent); override;
   published
     property Align;
     property Anchors;
@@ -187,11 +187,11 @@ type
   protected
     procedure CreateParams(var Params: TCreateParams); override;
     procedure SetParent(AParent: TWinControl); override;
-    procedure GetChildren(Proc: TGetChildProc; Root: TComponent); override;
     procedure SetChildOrder(Child: TComponent; Order: Integer); override;
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
+    procedure GetChildren(Proc: TGetChildProc; Root: TComponent); override;
   published
     property OnCreate: TNotifyEvent read FOnCreate write FOnCreate;
     property OnDestroy: TNotifyEvent read FOnDestroy write FOnDestroy;

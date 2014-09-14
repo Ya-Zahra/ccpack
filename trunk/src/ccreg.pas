@@ -207,7 +207,12 @@ begin
     end;
 end;
 
-procedure ModuleUnload(Instance: LongInt);
+{$IFNDEF DelphiXE2_UP}
+type
+  NativeInt = integer;
+{$ENDIF}
+
+procedure ModuleUnload(Instance: NativeInt);
 begin
   UnRegisterCustomContainerClasses(HMODULE(Instance));
 end;

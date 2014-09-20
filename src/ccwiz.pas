@@ -43,7 +43,7 @@ type
       IOTAWIzard,
       IOTARepositoryWizard,
       IOTAProjectWizard)
-    { IOTANotifier }
+    { IOTANotifier - all these doe nothing but must be implemented}
     procedure AfterSave;
     procedure BeforeSave;
     procedure Destroyed;
@@ -192,7 +192,7 @@ end;
 
 function TCCWizard.GetPage: string;
 begin
-  Result := 'New';
+  Result := 'ccpack';
 end;
 
 function TCCWizard.GetGlyph: cardinal;

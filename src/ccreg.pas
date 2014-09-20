@@ -102,23 +102,26 @@ end;
 function GetCustomContainerClass(const AClassName: string): TComponentClass;
 var
   i: Integer;
+  List: TList;
 begin
-  with CustomContainerClassList.LockList do
-    try
-      for i := 0 to Count - 1 do begin
-        Result := Items[i];
-        if Result.ClassNameIs(AClassName) then Exit;
-      end;
-      Result := nil;
-    finally
-      CustomContainerClassList.UnLockList;
+  List := CustomContainerClassList.LockList;
+  try
+    for i := 0 to List.Count - 1 do begin
+      Result := List[i];
+      if Result.ClassNameIs(AClassName) then
+        Exit;
     end;
+    Result := nil;
+  finally
+    CustomContainerClassList.UnLockList;
+  end;
 end;
 
 function FindCustomContainerClass(const AClassName: string): TComponentClass;
 begin
   Result := GetCustomContainerClass(AClassName);
-  if Result = nil then ClassNotFound(AClassName);
+  if Result = nil then
+    ClassNotFound(AClassName);
 end;
 
 function GetCustomContainerUnit(const AClassName: string): string;
@@ -194,17 +197,18 @@ procedure UnRegisterCustomContainerClasses(Module: HMODULE);
 var
   i: Integer;
   M: TMemoryBasicInformation;
+  List: TList;
 begin
-  with CustomContainerClassList.LockList do
-    try
-      for i := Count - 1 downto 0 do begin
-        VirtualQuery(Items[i], M, SizeOf(M));
-        if (Module = 0) or (HMODULE(M.AllocationBase) = Module) then
-          Delete(i);
-      end;
-    finally
-      CustomContainerClassList.UnLockList;
+  List := CustomContainerClassList.LockList;
+  try
+    for i := List.Count - 1 downto 0 do begin
+      VirtualQuery(List[i], M, SizeOf(M));
+      if (Module = 0) or (HMODULE(M.AllocationBase) = Module) then
+        List.Delete(i);
     end;
+  finally
+    CustomContainerClassList.UnLockList;
+  end;
 end;
 
 {$IFNDEF DelphiXE2_UP}

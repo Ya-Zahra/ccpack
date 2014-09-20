@@ -202,7 +202,7 @@ end;
 
 function TCCWizard.GetPage: string;
 begin
-  Result := 'ccpack';
+  Result := 'New';
 end;
 
 {$IFDEF Delphi2005_up}

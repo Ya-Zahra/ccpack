@@ -5,6 +5,7 @@ dcu/
 .*\.~.*
 .*\.tvsconfig$
 .*\.dsk$
+.*\.stat$
 ccpack.res$
 ccpack.cfg$
 ccpackdsg.res$

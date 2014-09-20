@@ -42,6 +42,9 @@ type
   TCCWizard = class(TInterfacedObject,
       IOTAWIzard,
       IOTARepositoryWizard,
+{$IFDEF Delphi2005_up}
+      IOTARepositoryWizard80,
+{$ENDIF}
       IOTAProjectWizard)
     { IOTANotifier - all these doe nothing but must be implemented}
     procedure AfterSave;
@@ -58,6 +61,13 @@ type
     function GetComment: string;
     function GetPage: string;
     function GetGlyph: cardinal;
+{$IFDEF Delphi2005_up}
+    { IOTARepositoryWizard80 }
+    function GetGalleryCategory: IOTAGalleryCategory;
+    function GetPersonality: string;
+    function GetDesigner: string;
+{$ENDIF}
+  public
   end;
 
   TCCModuleCreator = class(TInterfacedObject, IOTACreator, IOTAModuleCreator)
@@ -194,6 +204,32 @@ function TCCWizard.GetPage: string;
 begin
   Result := 'ccpack';
 end;
+
+{$IFDEF Delphi2005_up}
+function TCCWizard.GetDesigner: string;
+begin
+  Result := dVCL;
+end;
+
+// taken from Steve's Blog
+// http://www.lnssoftware.ca/blog/?p=80
+function TCCWizard.GetGalleryCategory: IOTAGalleryCategory;
+var
+  cat: IOTAGalleryCategory;
+  catMgr: IOTAGalleryCategoryManager;
+begin
+  catMgr := (BorlandIDEServices as IOTAGalleryCategoryManager);
+  Assert(Assigned(catMgr));
+  cat := catMgr.FindCategory(sCategoryDelphiNewFiles);
+  Assert(Assigned(cat));
+  Result := cat;
+end;
+
+function TCCWizard.GetPersonality: string;
+begin
+  Result := sDelphiPersonality;
+end;
+{$ENDIF}
 
 function TCCWizard.GetGlyph: cardinal;
 begin

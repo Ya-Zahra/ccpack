@@ -100,7 +100,17 @@
 {$DEFINE DelphiXE7_up}
 {$ENDIF}
 
+{$IFDEF VER290}
+{$DEFINE DelphiXE8}
+{$DEFINE DelphiXE8_up}
+{$ENDIF}
+
 // now add DelphiXx_Up constants for all previous versions based on the highest version found
+
+{$IFDEF DelphiXE8_up}
+{$DEFINE DelphiXE7_up}
+{$DEFINE DelphiXE7up}
+{$ENDIF}
 
 {$IFDEF DelphiXE7_up}
 {$DEFINE DelphiXE6_up}

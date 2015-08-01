@@ -179,7 +179,7 @@ begin
   if Assigned(RegisterCustomContainerProc) then
     RegisterCustomContainerProc(AClass)
   else
-    raise EComponentError.Create('Cannot register ' + AClass.ClassName + ' class.');
+    raise EComponentError.Create('Cannot register ' + AClass.ClassName + ' class (Try adding ccPackDsg to your requires list!)');
   with CustomContainerClassList.LockList do
     try
       Add(AClass);

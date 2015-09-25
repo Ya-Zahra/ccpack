@@ -105,7 +105,22 @@
 {$DEFINE DelphiXE8_up}
 {$ENDIF}
 
+// Embarcadero changed the naming scheme again.
+// It's Delphi 10 Seattle now
+// We assume that they will increment that number
+// for now and declare a DelphiXnn define for this.
+// Let's see what the next version will be called...
+{$IFDEF VER300}
+{$DEFINE DelphiX10}
+{$DEFINE DelphiX10_up}
+{$ENDIF}
+
 // now add DelphiXx_Up constants for all previous versions based on the highest version found
+
+{$IFDEF DelphiX10_up}
+{$DEFINE DelphiXE8_up}
+{$DEFINE DelphiXE8up}
+{$ENDIF}
 
 {$IFDEF DelphiXE8_up}
 {$DEFINE DelphiXE7_up}

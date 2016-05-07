@@ -115,7 +115,19 @@
 {$DEFINE DelphiX10_up}
 {$ENDIF}
 
+// It's Delphi 10.1 Berlin now
+{$IFDEF VER310}
+{$DEFINE DelphiX101}
+{$DEFINE DelphiX101_up}
+{$ENDIF}
+
 // now add DelphiXx_Up constants for all previous versions based on the highest version found
+
+{$IFDEF DelphiX101_up}
+{$DEFINE DelphiX10_up}
+{$DEFINE DelphiXE8_up}
+{$DEFINE DelphiXE8up}
+{$ENDIF}
 
 {$IFDEF DelphiX10_up}
 {$DEFINE DelphiXE8_up}
@@ -216,3 +228,4 @@
 {$DEFINE Delphi1_up}
 {$DEFINE Delphi1up}
 {$ENDIF}
+

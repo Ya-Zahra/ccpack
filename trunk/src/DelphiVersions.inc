@@ -121,12 +121,22 @@
 {$DEFINE DelphiX101_up}
 {$ENDIF}
 
+// Delphi 10.2 Tokyo
+{$IFDEF VER320}
+{$DEFINE DelphiX102}
+{$DEFINE DelphiX102_up}
+{$ENDIF}
+
 // now add DelphiXx_Up constants for all previous versions based on the highest version found
+
+{$IFDEF DelphiX102_up}
+{$DEFINE DelphiX101_up}
+{$DEFINE DelphiX101up}
+{$ENDIF}
 
 {$IFDEF DelphiX101_up}
 {$DEFINE DelphiX10_up}
-{$DEFINE DelphiXE8_up}
-{$DEFINE DelphiXE8up}
+{$DEFINE DelphiX10up}
 {$ENDIF}
 
 {$IFDEF DelphiX10_up}

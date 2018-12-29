@@ -46,7 +46,8 @@ type
       IOTARepositoryWizard80,
 {$ENDIF}
       IOTAProjectWizard)
-    { IOTANotifier - all these doe nothing but must be implemented}
+  private
+    { IOTANotifier - all these do nothing but must be implemented}
     procedure AfterSave;
     procedure BeforeSave;
     procedure Destroyed;
@@ -221,6 +222,10 @@ begin
   catMgr := (BorlandIDEServices as IOTAGalleryCategoryManager);
   Assert(Assigned(catMgr));
   cat := catMgr.FindCategory(sCategoryDelphiNewFiles);
+  if not Assigned(cat) then
+    cat := catMgr.FindCategory(sCategoryDelphiIndividualFiles);
+  if not Assigned(cat) then
+    cat := catMgr.FindCategory(sCategoryDelphiNew);
   Assert(Assigned(cat));
   Result := cat;
 end;

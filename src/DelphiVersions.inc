@@ -127,7 +127,18 @@
 {$DEFINE DelphiX102_up}
 {$ENDIF}
 
+// Delphi 10.3 Rio
+{$IFDEF VER330}
+{$DEFINE DelphiX103}
+{$DEFINE DelphiX103_up}
+{$ENDIF}
+
 // now add DelphiXx_Up constants for all previous versions based on the highest version found
+
+{$IFDEF DelphiX103_up}
+{$DEFINE DelphiX102_up}
+{$DEFINE DelphiX102up}
+{$ENDIF}
 
 {$IFDEF DelphiX102_up}
 {$DEFINE DelphiX101_up}

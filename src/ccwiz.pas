@@ -222,8 +222,10 @@ begin
   catMgr := (BorlandIDEServices as IOTAGalleryCategoryManager);
   Assert(Assigned(catMgr));
   cat := catMgr.FindCategory(sCategoryDelphiNewFiles);
+{$IFDEF DelphiX103_up}
   if not Assigned(cat) then
     cat := catMgr.FindCategory(sCategoryDelphiIndividualFiles);
+{$ENDIF}
   if not Assigned(cat) then
     cat := catMgr.FindCategory(sCategoryDelphiNew);
   Assert(Assigned(cat));

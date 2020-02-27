@@ -56,8 +56,8 @@ type
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
-    procedure GetChildren(Proc: TGetChildProc; Root: TComponent); override;
     property DockManager;
+    procedure GetChildren(Proc: TGetChildProc; Root: TComponent); override;
   published
     property Align;
     property Alignment;
@@ -68,6 +68,8 @@ type
     property BiDiMode;
     property BorderWidth;
     property BorderStyle;
+    property ClientHeight;
+    property ClientWidth;
     property DockSite;
     property DragCursor;
     property DragKind;

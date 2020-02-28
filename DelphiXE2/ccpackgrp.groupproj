@@ -1,0 +1,50 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{1a733364-0f19-49cb-987e-4c699581bc39}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="ccpack.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="ccpackdsg.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<BorlandProject>
+					<Default.Personality/>
+				</BorlandProject>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="ccpack">
+			<MSBuild Projects="ccpack.dproj"/>
+		</Target>
+		<Target Name="ccpack:Clean">
+			<MSBuild Projects="ccpack.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ccpack:Make">
+			<MSBuild Projects="ccpack.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="ccpackdsg">
+			<MSBuild Projects="ccpackdsg.dproj"/>
+		</Target>
+		<Target Name="ccpackdsg:Clean">
+			<MSBuild Projects="ccpackdsg.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ccpackdsg:Make">
+			<MSBuild Projects="ccpackdsg.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="ccpack;ccpackdsg"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="ccpack:Clean;ccpackdsg:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="ccpack:Make;ccpackdsg:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

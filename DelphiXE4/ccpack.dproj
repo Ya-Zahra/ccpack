@@ -44,7 +44,9 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_DcuOutput>.\dcu\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_DcuOutput>.\dcu\ccpack\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ObjOutput>.\dcu\ccpack\$(Platform)\$(Config)</DCC_ObjOutput>
+        <DCC_HppOutput>.\dcu\ccpack\$(Platform)\$(Config)</DCC_HppOutput>
         <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
         <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
@@ -76,8 +78,6 @@
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
         <DCC_DebugDCUs>true</DCC_DebugDCUs>
         <Version>7.0</Version>
-        <DCC_ObjOutput>..\dcu</DCC_ObjOutput>
-        <DCC_HppOutput>..\dcu</DCC_HppOutput>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>

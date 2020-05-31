@@ -42,7 +42,7 @@ ImageBase=4194304
 ExeDescription=Custom Container Pack - designtime
 [Directories]
 OutputDir=
-UnitOutputDir=.\dcu
+UnitOutputDir=.\dcu\ccpackdsg
 PackageDLLOutputDir=
 PackageDCPOutputDir=
 SearchPath=

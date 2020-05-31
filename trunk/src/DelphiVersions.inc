@@ -133,7 +133,18 @@
 {$DEFINE DelphiX103_up}
 {$ENDIF}
 
+// Delphi 10.4 Tokyo
+{$IFDEF VER340}
+{$DEFINE DelphiX104}
+{$DEFINE DelphiX104_up}
+{$ENDIF}
+
 // now add DelphiXx_Up constants for all previous versions based on the highest version found
+
+{$IFDEF DelphiX104_up}
+{$DEFINE DelphiX103_up}
+{$DEFINE DelphiX103up}
+{$ENDIF}
 
 {$IFDEF DelphiX103_up}
 {$DEFINE DelphiX102_up}

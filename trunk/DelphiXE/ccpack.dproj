@@ -44,9 +44,9 @@
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Cfg_2)'!=''">
 			<Version>7.0</Version>
-			<DCC_DcuOutput>..\dcu</DCC_DcuOutput>
-			<DCC_ObjOutput>..\dcu</DCC_ObjOutput>
-			<DCC_HppOutput>..\dcu</DCC_HppOutput>
+			<DCC_DcuOutput>.\dcu\ccpack\$(Platform)\$(Config)</DCC_DcuOutput>
+			<DCC_ObjOutput>.\dcu\ccpack\$(Platform)\$(Config)</DCC_ObjOutput>
+			<DCC_HppOutput>.\dcu\ccpack\$(Platform)\$(Config)</DCC_HppOutput>
 		</PropertyGroup>
 		<ProjectExtensions>
 			<Borland.Personality>Delphi.Personality.12</Borland.Personality>

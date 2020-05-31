@@ -23,7 +23,7 @@ package ccpackdsg;
 {$MINENUMSIZE 1}
 {$IMAGEBASE $400000}
 {$DESCRIPTION 'Custom Containers Pack - designtime'}
-{$LIBSUFFIX '100'}
+{$LIBSUFFIX '120'}
 {$DESIGNONLY}
 {$IMPLICITBUILD OFF}
 

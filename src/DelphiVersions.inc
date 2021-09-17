@@ -139,7 +139,18 @@
 {$DEFINE DelphiX104_up}
 {$ENDIF}
 
+// Delhi 11, we assume, that they will follow up with 11.1, so lets start with 3 digits
+{$IF CompilerVersion >= 35}
+{$DEFINE DelphiX110}
+{$DEFINE DelphiX110_up}
+{$IFEND}
+
 // now add DelphiXx_Up constants for all previous versions based on the highest version found
+
+{$IFDEF DelphiX110_up}
+{$DEFINE DelphiX104_up}
+{$DEFINE DelphiX104up}
+{$ENDIF}
 
 {$IFDEF DelphiX104_up}
 {$DEFINE DelphiX103_up}
